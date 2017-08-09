@@ -23,23 +23,23 @@ searchInput.addEventListener("click", function () {
       console.log("Fetching errors", err);
     })
 });
-//buttons//
-
-
-
-
 
 
 function dataToPopulate(data) {
+  recipeCard = "";
   data.forEach( function (data) {
     let title = data.title;
     let href = data.href;
     let thumbnail = data.thumbnail;
-    console.log(title, href, thumbnail);
+    if (thumbnail === "") {
+      thumbnail = "http://via.placeholder.com/107x80";
+
+    }
+    // console.log(title, href, thumbnail);
     recipeCard += `
-    <div class="oneRecipeCard">
+    <div class="oneRecipeCard hvr-float-shadow">
     <p>${title}</p>
-    <a href="${href}"></a>
+    <a href="${href}"><p>Recipe</p></a>
     <img src="${thumbnail}">
     </div>
     `;

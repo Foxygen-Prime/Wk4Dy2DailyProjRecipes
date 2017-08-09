@@ -1,0 +1,94 @@
+.wrapper {
+width: 900px;
+margin: 40px 120px 40px 120px;
+background-color: #333333;
+box-shadow: 10px 10px 5px #131313;
+}
+.searchBar {
+padding: 40px 40px 40px 40px;
+box-shadow: 5px 5px 3px #131313;
+}
+
+header {
+  margin: 40px 120px 40px 120px;
+  color: white;
+  font-family: 'Saira', sans-serif;
+
+}
+
+.backybackground{
+  background-color: black;
+}
+
+#searchResults {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-family: 'Saira', sans-serif;
+  font-weight: bolder;
+}
+
+.oneRecipeCard {
+  box-sizing: content-box;
+  margin: 1em auto;
+  padding: 2em;
+border-left: 2px gray;
+border-right: 2px gray;
+  /*display: inline-flex;*/
+  width: 250px;
+  font-family: 'Saira', sans-serif;
+  font-weight: bold;
+/*//gradient//*/
+  background: #e26600; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(left top, #e26600, #ffbb4f); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(bottom right, #e26600, #ffbb4f); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(bottom right, #e26600, #ffbb4f); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(to bottom right, #e26600, #ffbb4f); /* Standard syntax */
+  position: relative;
+  text-align: center;
+}
+
+<!-- hover.css http://ianlunn.github.io/Hover/ -->
+
+/* Float Shadow */
+.hvr-float-shadow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.hvr-float-shadow:before {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  content: '';
+  top: 100%;
+  left: 5%;
+  height: 10px;
+  width: 90%;
+  opacity: 0;
+  background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, transparent 80%);
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, transparent 80%);
+  /* W3C */
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform, opacity;
+  transition-property: transform, opacity;
+}
+.hvr-float-shadow:hover, .hvr-float-shadow:focus, .hvr-float-shadow:active {
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+  /* move the element up by 5px */
+}
+.hvr-float-shadow:hover:before, .hvr-float-shadow:focus:before, .hvr-float-shadow:active:before {
+  opacity: 1;
+  -webkit-transform: translateY(5px);
+  transform: translateY(5px);
+  /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
+}
